@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+# VibeCart – Mock E-Commerce App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🛍️ Overview
+This is a **mock full-stack e-commerce application** built as part of an assignment. It includes a React frontend, mock backend APIs, and context-based cart and authentication flows. The goal was to implement product listing, cart functionality, and a basic checkout flow using mock data and modular architecture.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
+- Product listing from mock API
+- Add to Cart using React Context
+- Cart page with quantity and total
+- Checkout form with shipping info
+- Order confirmation page with delivery estimate
+- Responsive UI using Tailwind CSS
+- Toast notifications for feedback
+- Navigation using React Router
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🧪 Tech Stack
+| Layer | Tools Used |
+|-------|------------|
+| Frontend | React, React Router, Tailwind CSS, Axios, Toastify |
+| State Management | React Context API (`AuthContext`, `CartContext`) |
+| Backend (Mock) | Express.js, MongoDB (mocked locally), REST APIs |
+| Dev Tools | VS Code, GitHub, Postman |
+| Environment | `.env` for API base URL configuration |
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## ⚙️ Setup Instructions
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the repo
+```bash
+git clone https://github.com/your-username/vibeCart.git
+cd vibeCart/frontend
 
-### `npm run build`
+2. Install dependencies
+npm install
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Configure .env
+Create a .env file in /frontend:
+REACT_APP_API_BASE_URL=http://localhost:5050
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+4. Start the frontend
+npm start
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+5. Start the backend (if applicable)
+cd ../backend
+npm install
+npm run dev
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+📸 Screenshots
+Screenshots of:
+- Folder structure
+- Product listing page
+- Cart page
+- Checkout form
+- Order confirmation page
+- Errors and fixes
+These are included in the /screenshots folder or will be attached in the final report.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+✅ Assignment Notes
+- Built using mock APIs and mock data
+- Focused on modular architecture and UI polish
+- Bonus features: order confirmation page, delivery estimate, route protection
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+🧠 Challenges Faced
+ Issue/ Resolution
+  dispatch already declared | Removed duplicate declaration in Products.jsx
 
-### Code Splitting
+Cart not updating | Ensured CartProvider wraps <App /> in index.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Navigation after checkout | Replaced navigate("/") with navigate("/order-confirmation")
 
-### Analyzing the Bundle Size
+UI not polished | Used Tailwind CSS for layout, spacing, and responsiveness
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+📦 Future Improvements
+- Persist cart in localStorage
+- Save orders to backend
+- Add login protection and email confirmation
+- Add quantity controls and payment integration
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+🙌 Author
+Shruti Hedau
+Full-stack developer in transition, focused on building modular, modern web apps with React and Node.js.
