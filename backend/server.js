@@ -5,7 +5,7 @@ const cors = require("cors");
 require("dotenv").config();
 
 const app = express();
-app.use(cors({ origin: "*", credentials: true }));
+app.use(cors({ origin: "*", methods: ["GET", "POST", "PUT", "DELETE"], credentials: true }));
 app.use(express.json());
 app.get("/hello", (req, res) => {
   res.send("Hello Shruti, your API is working!");
