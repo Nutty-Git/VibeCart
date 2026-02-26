@@ -13,7 +13,7 @@ const Products = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await axios.get("http://localhost:5050/api/products");
+        const res = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/api/products`);
         setProducts(res.data);
       } catch (err) {
         toast.error("Failed to load products");
