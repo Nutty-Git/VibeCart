@@ -90,7 +90,7 @@ router.get("/seed", async (req, res) => {
     ];
 
     await Product.deleteMany();
-    const inserted = await Product.insertMany(formatted);
+    const inserted = await Product.insertMany(customProducts);
 
     res.json({ message: "Seeded successfully", count: inserted.length });
   } catch (err) {
