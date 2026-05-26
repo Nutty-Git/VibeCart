@@ -7,87 +7,87 @@ const Product = require("../models/Product");
 router.get("/seed", async (req, res) => {
   try {
     const customProducts = [
-      {
-        title: "Vibe Headphones",
-        price: 99,
-        description: "High quality sound for the best vibe.",
-        image: "https://unsplash.com",
-        category: "Electronics",
-        countInStock: 10
-      },
-      {
-        title: "Aura Streetwear Hoodie",
-        price: 65,
-        description: "Heavyweight organic cotton hoodie with a relaxed drop-shoulder fit.",
-        image: "https://unsplash.com",
-        category: "Apparel",
-        countInStock: 15
-      },
-      {
-        title: "Minimalist Stainless Bottle",
-        price: 28,
-        description: "Double-walled vacuum insulation keeps your drinks ice-cold for 24 hours.",
-        image: "https://unsplash.com",
-        category: "Lifestyle",
-        countInStock: 25
-      },
-      {
-        title: "Cyber Glow Mechanical Keyboard",
-        price: 89,
-        description: "Compact 75% layout with hot-swappable linear switches and vibrant RGB.",
-        image: "https://unsplash.com",
-        category: "Electronics",
-        countInStock: 8
-      },
-      {
-        title: "Nomad Waterproof Backpack",
-        price: 75,
-        description: "Sleek commuter pack featuring a dedicated 16-inch padded laptop sleeve.",
-        image: "https://unsplash.com",
-        category: "Lifestyle",
-        countInStock: 12
-      },
-      {
-        title: "Pulse Smart Fitness Band",
-        price: 45,
-        description: "Tracks heart rate, sleep quality, and workouts with a 10-day battery life.",
-        image: "https://unsplash.com",
-        category: "Electronics",
-        countInStock: 20
-      },
-      {
-        title: "Matte Ceramic Mug Set",
-        price: 24,
-        description: "Set of two minimalist stackable ceramic mugs. Dishwasher safe.",
-        image: "https://unsplash.com",
-        category: "Home",
-        countInStock: 18
-      },
-      {
-        title: "Horizon 4K Home Projector",
-        price: 349,
-        description: "Portable cinematic short-throw projector with built-in stereo speakers.",
-        image: "https://unsplash.com",
-        category: "Electronics",
-        countInStock: 5
-      },
-      {
-        title: "Classic Leather Passport Wallet",
-        price: 35,
-        description: "Handcrafted top-grain leather travel organizer with built-in RFID blocking.",
-        image: "https://unsplash.com",
-        category: "Lifestyle",
-        countInStock: 14
-      },
-      {
-        title: "Sandalwood Crackle Candle",
-        price: 18,
-        description: "Eco-friendly hand-poured soy wax candle featuring a soothing wooden wick.",
-        image: "https://unsplash.com",
-        category: "Home",
-        countInStock: 30
-      }
-    ];
+  {
+    title: "Vibe Headphones",
+    price: 99,
+    description: "High quality sound for the best vibe.",
+    image: "https://unsplash.com",
+    category: "Electronics",
+    countInStock: 10
+  },
+  {
+    title: "Aura Streetwear Hoodie",
+    price: 65,
+    description: "Heavyweight organic cotton hoodie with a relaxed drop-shoulder fit.",
+    image: "https://unsplash.com", // Fixed Image URL
+    category: "Apparel",
+    countInStock: 15
+  },
+  {
+    title: "Minimalist Stainless Bottle",
+    price: 28,
+    description: "Double-walled vacuum insulation keeps your drinks ice-cold for 24 hours.",
+    image: "https://unsplash.com",
+    category: "Lifestyle",
+    countInStock: 25
+  },
+  {
+    title: "Cyber Glow Mechanical Keyboard",
+    price: 89,
+    description: "Compact 75% layout with hot-swappable linear switches and vibrant RGB.",
+    image: "https://unsplash.com", // Fixed Image URL
+    category: "Electronics",
+    countInStock: 8
+  },
+  {
+    title: "Nomad Waterproof Backpack",
+    price: 75,
+    description: "Sleek commuter pack featuring a dedicated 16-inch padded laptop sleeve.",
+    image: "https://unsplash.com",
+    category: "Lifestyle",
+    countInStock: 12
+  },
+  {
+    title: "Pulse Smart Fitness Band",
+    price: 45,
+    description: "Tracks heart rate, sleep quality, and workouts with a 10-day battery life.",
+    image: "https://unsplash.com", // Fixed Image URL
+    category: "Electronics",
+    countInStock: 20
+  },
+  {
+    title: "Matte Ceramic Mug Set",
+    price: 24,
+    description: "Set of two minimalist stackable ceramic mugs. Dishwasher safe.",
+    image: "https://unsplash.com", // Fixed Image URL
+    category: "Home",
+    countInStock: 18
+  },
+  {
+    title: "Horizon 4K Home Projector",
+    price: 349,
+    description: "Portable cinematic short-throw projector with built-in stereo speakers.",
+    image: "https://unsplash.com",
+    category: "Electronics",
+    countInStock: 5
+  },
+  {
+    title: "Classic Leather Passport Wallet",
+    price: 35,
+    description: "Handcrafted top-grain leather travel organizer with built-in RFID blocking.",
+    image: "https://unsplash.com",
+    category: "Lifestyle",
+    countInStock: 14
+  },
+  {
+    title: "Sandalwood Crackle Candle",
+    "price": 18,
+    description: "Eco-friendly hand-poured soy wax candle featuring a soothing wooden wick.",
+    image: "https://unsplash.com",
+    category: "Home",
+    countInStock: 30
+  }
+];
 
     await Product.deleteMany();
     const inserted = await Product.insertMany(customProducts);
