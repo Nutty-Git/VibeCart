@@ -81,7 +81,7 @@ router.get("/seed", async (req, res) => {
   },
   {
     name: "Sandalwood Crackle Candle",
-    "price": 18,
+    price: 18,
     description: "Eco-friendly hand-poured soy wax candle featuring a soothing wooden wick.",
     image: "https://unsplash.com",
     category: "Home",
